@@ -1,0 +1,40 @@
+# User specific & automatically generated files #
+#################################################
+/app/Config/database.php
+/vendor
+/app/vendor
+/app/tmp
+/lib/Cake/Console/Templates/skel/tmp/
+/plugins
+/Plugin
+/vendor
+/vendors
+/build
+/dist
+/tags
+*.mo
+/app/webroot/*.xml
+.htaccess
+vendor/*
+Plugin/*
+composer.lock
+LOCAL_DEV
+
+# IDE and editor specific files #
+#################################
+/nbproject
+.idea
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Vagrant
+vagrant/.vagrant
