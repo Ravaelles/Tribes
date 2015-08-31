@@ -1,6 +1,6 @@
 <?php
 
     const HTML = "./html/";
-    const PHP = "./php/";
+    const JS = "./js/";
 
-include HTML . 'start.html';
+include HTML . 'html.html';

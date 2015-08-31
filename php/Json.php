@@ -5,6 +5,8 @@ class Json {
     private $object;
     private $params = [];
 
+    // =========================================================================
+
     public static function createFor(Object $object) {
         $json = new Json();
         $json->object = $object;
@@ -13,16 +15,14 @@ class Json {
 
     // =========================================================================
 
-    public function generateJson() {
-        echo "<br />generating json ## ";
-
+    public function generateJson($useJsonNotArray = false) {
         foreach ($this->object as $property => $value) {
             if (!$this->skipProperty($property)) {
                 $this->params[$property] = $value;
             }
         }
 
-        return json_encode($this->params);
+        return $useJsonNotArray ? $this->params : json_encode($this->params);
     }
 
     public function addProperty($propertyName) {

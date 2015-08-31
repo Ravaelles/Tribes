@@ -16,8 +16,4 @@ class Object {
         return self::$all[$class];
     }
 
-    public static function allToJson($class) {
-        self::$all[$class];
-    }
-
 }

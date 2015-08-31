@@ -10,8 +10,8 @@
 
 class AutoLoader {
 
-    private static $doNotAutoload = ['.', '..', 'Start', '_TURN_'];
-    private static $earlyAutoload = ['Object', 'Json'];
+    private static $doNotAutoload = ['.', '..', 'Run', '_TURN_'];
+    private static $earlyAutoload = ['bootstrap', 'Object', 'Json'];
 
     public static function autoLoad() {
 
