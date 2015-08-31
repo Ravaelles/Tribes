@@ -1,15 +1,21 @@
 <?php
 
-class Object {
+class MapObject extends Object {
 
-    public static $all = [];
+    public $x;
+    public $y;
+
+    // =========================================================================
 
     function __construct() {
-        self::$all[get_class($this)][] = $this;
+        parent::__construct();
+        $this->json = Json::createFor($this);
     }
 
-    public static function all($class) {
-        return self::$all[$class];
+    // =========================================================================
+
+    public function json() {
+        return $this->json->generateJson();
     }
 
 }

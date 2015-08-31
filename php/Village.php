@@ -1,9 +1,7 @@
 <?php
 
-class Village extends Object {
+class Village extends MapObject {
 
-    public $x;
-    public $y;
     public $people;
 
     function __construct($x, $y) {

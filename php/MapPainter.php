@@ -3,18 +3,16 @@
 class MapPainter {
 
     public static function paint() {
-        $return = [];
-        $return["villages"] = self::villages();
-        return json_encode($return);
+        self::paintVillages();
     }
 
     // =========================================================================
 
-    private static function villages() {
+    private static function paintVillages() {
         $return = [];
 
         foreach (Object::all(Village::class) as $village) {
-            $return[] = $village;
+            $return[] = $village->json();
         }
 
         return $return;
