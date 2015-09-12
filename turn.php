@@ -1,6 +1,5 @@
 <?php
 
-    const PHP = "./php/";
-    const IMAGES = "./images/";
+include "AutoLoader.php"; // Load all classes and run important functions
 
-include PHP . "Run.php";
+//Turn::nextTurn();

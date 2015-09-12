@@ -4,11 +4,15 @@ body {
 }
 
 #canvas {
-    /*width: 100%;*/
-    /*height: 100%;*/
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     /*min-width: 1024px;*/
     /*min-height: 800px;*/
     background-color: black;
+    background-color: #010;
+    /*background-color: white;*/
 }
 
 .loading-game-text {

@@ -1,0 +1,63 @@
+.map-unit {
+    position: absolute;
+}
+
+.map-unit img {
+    margin-bottom: -4px;
+    padding-bottom: 1px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.map-unit img:hover {
+    border-radius: 15%;
+    background-color: rgba(100, 255, 100, 0.15);
+    border: 1px solid rgba(100, 255, 100, 0.6);
+}
+
+.village img {
+    border-radius: 50%;
+}
+
+.map-unit-value-background {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    /*color: #59f;*/
+    color: #272;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+    text-shadow: 0 0 2.5px #59f;
+}
+
+.background-left-top {
+    margin-left: -0.3px;
+    margin-top: -0.3px;
+}
+
+.background-right-top {
+    margin-top: -0.3px;
+    margin-left: 0.3px;
+}
+
+.background-left-bottom {
+    margin-top: 0.3px;
+    margin-left: -0.3px;
+}
+
+.background-right-bottom {
+    margin-top: 0.3px;
+    margin-left: 0.3px;
+}
+
+.map-unit-value {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+}

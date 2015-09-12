@@ -2,18 +2,26 @@
 
 class MapObject extends Object {
 
+    public static $classNamesExtending = [];
+    // =========================================================================
+
     public $x;
     public $y;
+    public $turnShown;
+    public $turnHidden = 0;
 
     // =========================================================================
 
     function __construct() {
         parent::__construct();
         $this->json = Json::createFor($this);
+        $this->turnShown = Turn::$TURN_NUMBER;
+
+        $className = get_class($this);
+        self::$classNamesExtending[$className] = $className;
     }
 
     // =========================================================================
-
 
     public static function allToJson($class, $useJsonNotArray = true) {
 

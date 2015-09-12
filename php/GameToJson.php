@@ -11,30 +11,24 @@ class GameToJson {
 
         $allJsonStructure = [
             'status' => $status,
-            'mapUnits' => $mapUnits
+            'mapUnitTypes' => $mapUnits
         ];
 
         return json_encode($allJsonStructure);
     }
 
     private static function getMapUnits() {
-        $village = MapObject::allToJson(Village::class, false);
-        return [$village];
+        $mapObjects = [];
+
+        foreach (MapObject::$classNamesExtending as $className) {
+            $mapObjects[] = MapObject::allToJson($className, false);
+        }
+
+        return $mapObjects;
+//        return [
+//            MapObject::allToJson(Village::class, false),
+//            MapObject::allToJson(Hunters::class, false),
+//        ];
     }
 
-//    public static function paint() {
-//        self::paintVillages();
-//    }
-//
-//    // =========================================================================
-//
-//    private static function paintVillages() {
-//        $return = [];
-//
-//        foreach (Object::all(Village::class) as $village) {
-//            $return[] = $village->json();
-//        }
-//
-//        return $return;
-//    }
 }

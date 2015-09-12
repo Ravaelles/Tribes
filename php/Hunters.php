@@ -1,12 +1,12 @@
 <?php
 
-class Village extends MapObject {
+class Hunters extends MapObject {
 
-    public static $image = "villages/indian_camp.png";
-    public static $imageSize = [80, 45];
+    public static $image = "hunters/1.png";
+    public static $imageSize = [64, 64];
     // =========================================================================
 
-    public $cssClassName = "village";
+    public $cssClassName = "hunters";
     public $people;
 
     // =========================================================================
